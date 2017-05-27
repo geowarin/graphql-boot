@@ -1,0 +1,24 @@
+{
+  "name": "ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node fuse.ts"
+  },
+  "dependencies": {
+    "graphql-tag": "^2.2.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-apollo": "^1.2.0",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.18",
+    "@types/react": "^15.0.24",
+    "@types/react-dom": "^15.5.0",
+    "fuse-box": "^2.0.0",
+    "ts-node": "^3.0.4",
+    "typescript": "^2.3.2"
+  }
+}

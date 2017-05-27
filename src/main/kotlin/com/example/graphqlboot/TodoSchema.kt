@@ -3,7 +3,6 @@ package com.example.graphqlboot
 import graphql.Scalars.GraphQLString
 import graphql.schema.GraphQLArgument.newArgument
 import graphql.schema.GraphQLFieldDefinition.newFieldDefinition
-import graphql.schema.GraphQLInterfaceType
 import graphql.schema.GraphQLList
 import graphql.schema.GraphQLObjectType
 import graphql.schema.GraphQLObjectType.newObject
@@ -21,7 +20,7 @@ class TodoSchema {
       Todo("Hella")
   )
 
-  data class Todo(val name: String, val image:Image? = null)
+  data class Todo(val name: String, val image: Image? = null)
   data class Image(val path: String)
 
   @Bean
@@ -82,27 +81,4 @@ class TodoSchema {
 
     return schema
   }
-
-//  @GraphQLSchemaQuery
-//  private val root: RootObjectType? = null
-//
-//  // default value provider for an input mutation parameter
-//  val addTodoInputDefaultValue: AddTodoIn
-//    get() {
-//      val addTodoInput = AddTodoIn()
-//      return addTodoInput.copy(text = "--- default text ---")
-//    }
-//
-//  @GraphQLMutation
-//  @GraphQLOut("todoEdge")
-//  fun addTodoMutation(
-//      @GraphQLIn(value = "addTodoInput", defaultProvider = "getAddTodoInputDefaultValue") addTodoInput: AddTodoIn): TodoObjectType.TodoEdgeObjectType {
-//
-//    // mutation implementaion goes here
-//    return todoEdgeObjectType
-//  }
 }
-
-//data class AddTodoIn (
-//  val text: String? = null
-//)
