@@ -15,7 +15,8 @@ import {CSSPlugin, FuseBox, SVGPlugin, WebIndexPlugin} from "fuse-box";
 let fuse = new FuseBox({
   homeDir: "src/",
   output: "build/$name.js",
-  tsConfig: './tsConfig.json',
+  tsConfig: "./tsConfig.json",
+  target: "browser",
   plugins: [
     SVGPlugin(),
     [
@@ -23,7 +24,7 @@ let fuse = new FuseBox({
       // CSSResourcePlugin({inline: true}),
       CSSPlugin()
     ],
-    WebIndexPlugin({template: './src/index.html'})
+    WebIndexPlugin({template: "./src/index.html"})
   ]
 });
 
